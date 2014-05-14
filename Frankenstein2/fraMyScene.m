@@ -22,7 +22,7 @@
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
-        
+        [NSLog(@"Changing something!")];
         [self addChild:myLabel];
     }
     return self;
