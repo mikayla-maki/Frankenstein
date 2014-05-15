@@ -25,6 +25,8 @@
 		D05034EA19242A90007199CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034C219242A90007199CB /* UIKit.framework */; };
 		D05034F219242A90007199CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D05034F019242A90007199CB /* InfoPlist.strings */; };
 		D05034F419242A90007199CB /* Frankenstein2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D05034F319242A90007199CB /* Frankenstein2Tests.m */; };
+		D06DF15D192436B500379369 /* Test.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D06DF15B192436B500379369 /* Test.tmx */; };
+		D06DF15E192436B500379369 /* TileSet.png in Resources */ = {isa = PBXBuildFile; fileRef = D06DF15C192436B500379369 /* TileSet.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		D05034EF19242A90007199CB /* Frankenstein2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Frankenstein2Tests-Info.plist"; sourceTree = "<group>"; };
 		D05034F119242A90007199CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D05034F319242A90007199CB /* Frankenstein2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Frankenstein2Tests.m; sourceTree = "<group>"; };
+		D06DF15B192436B500379369 /* Test.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test.tmx; sourceTree = "<group>"; };
+		D06DF15C192436B500379369 /* TileSet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileSet.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 		D05034B219242A90007199CB = {
 			isa = PBXGroup;
 			children = (
+				D06DF15B192436B500379369 /* Test.tmx */,
+				D06DF15C192436B500379369 /* TileSet.png */,
 				D05034C619242A90007199CB /* Frankenstein2 */,
 				D05034ED19242A90007199CB /* Frankenstein2Tests */,
 				D05034BD19242A90007199CB /* Frameworks */,
@@ -244,11 +250,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06DF15E192436B500379369 /* TileSet.png in Resources */,
 				D05034DF19242A90007199CB /* Spaceship.png in Resources */,
 				D05034E119242A90007199CB /* Images.xcassets in Resources */,
 				D05034D719242A90007199CB /* Main_iPad.storyboard in Resources */,
 				D05034D419242A90007199CB /* Main_iPhone.storyboard in Resources */,
 				D05034CB19242A90007199CB /* InfoPlist.strings in Resources */,
+				D06DF15D192436B500379369 /* Test.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +495,7 @@
 				D05034F919242A90007199CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D05034FA19242A90007199CB /* Build configuration list for PBXNativeTarget "Frankenstein2Tests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +504,7 @@
 				D05034FC19242A90007199CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
