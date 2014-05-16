@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D05034BF19242A90007199CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034BE19242A90007199CB /* Foundation.framework */; };
+		D05034C119242A90007199CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034C019242A90007199CB /* CoreGraphics.framework */; };
+		D05034C319242A90007199CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034C219242A90007199CB /* UIKit.framework */; };
+		D05034C519242A90007199CB /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034C419242A90007199CB /* SpriteKit.framework */; };
+		D05034CB19242A90007199CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D05034C919242A90007199CB /* InfoPlist.strings */; };
+		D05034CD19242A90007199CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D05034CC19242A90007199CB /* main.m */; };
+		D05034D119242A90007199CB /* fraAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D05034D019242A90007199CB /* fraAppDelegate.m */; };
+		D05034D419242A90007199CB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05034D219242A90007199CB /* Main_iPhone.storyboard */; };
+		D05034D719242A90007199CB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05034D519242A90007199CB /* Main_iPad.storyboard */; };
+		D05034DA19242A90007199CB /* fraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05034D919242A90007199CB /* fraViewController.m */; };
+		D05034DD19242A90007199CB /* fraMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D05034DC19242A90007199CB /* fraMyScene.m */; };
+		D05034DF19242A90007199CB /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = D05034DE19242A90007199CB /* Spaceship.png */; };
+		D05034E119242A90007199CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05034E019242A90007199CB /* Images.xcassets */; };
+		D05034E819242A90007199CB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034E719242A90007199CB /* XCTest.framework */; };
+		D05034E919242A90007199CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034BE19242A90007199CB /* Foundation.framework */; };
+		D05034EA19242A90007199CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05034C219242A90007199CB /* UIKit.framework */; };
+		D05034F219242A90007199CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D05034F019242A90007199CB /* InfoPlist.strings */; };
+		D05034F419242A90007199CB /* Frankenstein2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D05034F319242A90007199CB /* Frankenstein2Tests.m */; };
+		D06DF15D192436B500379369 /* Test.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D06DF15B192436B500379369 /* Test.tmx */; };
+		D06DF15E192436B500379369 /* TileSet.png in Resources */ = {isa = PBXBuildFile; fileRef = D06DF15C192436B500379369 /* TileSet.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D05034EB19242A90007199CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05034B319242A90007199CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D05034BA19242A90007199CB;
+			remoteInfo = Frankenstein2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D05034BB19242A90007199CB /* Frankenstein2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frankenstein2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05034BE19242A90007199CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D05034C019242A90007199CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D05034C219242A90007199CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D05034C419242A90007199CB /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		D05034C819242A90007199CB /* Frankenstein2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Frankenstein2-Info.plist"; sourceTree = "<group>"; };
+		D05034CA19242A90007199CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D05034CC19242A90007199CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D05034CE19242A90007199CB /* Frankenstein2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Frankenstein2-Prefix.pch"; sourceTree = "<group>"; };
+		D05034CF19242A90007199CB /* fraAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fraAppDelegate.h; sourceTree = "<group>"; };
+		D05034D019242A90007199CB /* fraAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fraAppDelegate.m; sourceTree = "<group>"; };
+		D05034D319242A90007199CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		D05034D619242A90007199CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		D05034D819242A90007199CB /* fraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fraViewController.h; sourceTree = "<group>"; };
+		D05034D919242A90007199CB /* fraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fraViewController.m; sourceTree = "<group>"; };
+		D05034DB19242A90007199CB /* fraMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fraMyScene.h; sourceTree = "<group>"; };
+		D05034DC19242A90007199CB /* fraMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fraMyScene.m; sourceTree = "<group>"; };
+		D05034DE19242A90007199CB /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		D05034E019242A90007199CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D05034E619242A90007199CB /* Frankenstein2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Frankenstein2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05034E719242A90007199CB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D05034EF19242A90007199CB /* Frankenstein2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Frankenstein2Tests-Info.plist"; sourceTree = "<group>"; };
+		D05034F119242A90007199CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D05034F319242A90007199CB /* Frankenstein2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Frankenstein2Tests.m; sourceTree = "<group>"; };
+		D06DF15B192436B500379369 /* Test.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Test.tmx; sourceTree = "<group>"; };
+		D06DF15C192436B500379369 /* TileSet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TileSet.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D05034B819242A90007199CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05034C119242A90007199CB /* CoreGraphics.framework in Frameworks */,
+				D05034C319242A90007199CB /* UIKit.framework in Frameworks */,
+				D05034C519242A90007199CB /* SpriteKit.framework in Frameworks */,
+				D05034BF19242A90007199CB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05034E319242A90007199CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05034E819242A90007199CB /* XCTest.framework in Frameworks */,
+				D05034EA19242A90007199CB /* UIKit.framework in Frameworks */,
+				D05034E919242A90007199CB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D05034B219242A90007199CB = {
+			isa = PBXGroup;
+			children = (
+				D06DF15B192436B500379369 /* Test.tmx */,
+				D06DF15C192436B500379369 /* TileSet.png */,
+				D05034C619242A90007199CB /* Frankenstein2 */,
+				D05034ED19242A90007199CB /* Frankenstein2Tests */,
+				D05034BD19242A90007199CB /* Frameworks */,
+				D05034BC19242A90007199CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D05034BC19242A90007199CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D05034BB19242A90007199CB /* Frankenstein2.app */,
+				D05034E619242A90007199CB /* Frankenstein2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D05034BD19242A90007199CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D05034BE19242A90007199CB /* Foundation.framework */,
+				D05034C019242A90007199CB /* CoreGraphics.framework */,
+				D05034C219242A90007199CB /* UIKit.framework */,
+				D05034C419242A90007199CB /* SpriteKit.framework */,
+				D05034E719242A90007199CB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D05034C619242A90007199CB /* Frankenstein2 */ = {
+			isa = PBXGroup;
+			children = (
+				D05034CF19242A90007199CB /* fraAppDelegate.h */,
+				D05034D019242A90007199CB /* fraAppDelegate.m */,
+				D05034D219242A90007199CB /* Main_iPhone.storyboard */,
+				D05034D519242A90007199CB /* Main_iPad.storyboard */,
+				D05034D819242A90007199CB /* fraViewController.h */,
+				D05034D919242A90007199CB /* fraViewController.m */,
+				D05034DB19242A90007199CB /* fraMyScene.h */,
+				D05034DC19242A90007199CB /* fraMyScene.m */,
+				D05034DE19242A90007199CB /* Spaceship.png */,
+				D05034E019242A90007199CB /* Images.xcassets */,
+				D05034C719242A90007199CB /* Supporting Files */,
+			);
+			path = Frankenstein2;
+			sourceTree = "<group>";
+		};
+		D05034C719242A90007199CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D05034C819242A90007199CB /* Frankenstein2-Info.plist */,
+				D05034C919242A90007199CB /* InfoPlist.strings */,
+				D05034CC19242A90007199CB /* main.m */,
+				D05034CE19242A90007199CB /* Frankenstein2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D05034ED19242A90007199CB /* Frankenstein2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D05034F319242A90007199CB /* Frankenstein2Tests.m */,
+				D05034EE19242A90007199CB /* Supporting Files */,
+			);
+			path = Frankenstein2Tests;
+			sourceTree = "<group>";
+		};
+		D05034EE19242A90007199CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D05034EF19242A90007199CB /* Frankenstein2Tests-Info.plist */,
+				D05034F019242A90007199CB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D05034BA19242A90007199CB /* Frankenstein2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D05034F719242A90007199CB /* Build configuration list for PBXNativeTarget "Frankenstein2" */;
+			buildPhases = (
+				D05034B719242A90007199CB /* Sources */,
+				D05034B819242A90007199CB /* Frameworks */,
+				D05034B919242A90007199CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Frankenstein2;
+			productName = Frankenstein2;
+			productReference = D05034BB19242A90007199CB /* Frankenstein2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D05034E519242A90007199CB /* Frankenstein2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D05034FA19242A90007199CB /* Build configuration list for PBXNativeTarget "Frankenstein2Tests" */;
+			buildPhases = (
+				D05034E219242A90007199CB /* Sources */,
+				D05034E319242A90007199CB /* Frameworks */,
+				D05034E419242A90007199CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D05034EC19242A90007199CB /* PBXTargetDependency */,
+			);
+			name = Frankenstein2Tests;
+			productName = Frankenstein2Tests;
+			productReference = D05034E619242A90007199CB /* Frankenstein2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D05034B319242A90007199CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = fra;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Trenton Maki";
+				TargetAttributes = {
+					D05034E519242A90007199CB = {
+						TestTargetID = D05034BA19242A90007199CB;
+					};
+				};
+			};
+			buildConfigurationList = D05034B619242A90007199CB /* Build configuration list for PBXProject "Frankenstein2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D05034B219242A90007199CB;
+			productRefGroup = D05034BC19242A90007199CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D05034BA19242A90007199CB /* Frankenstein2 */,
+				D05034E519242A90007199CB /* Frankenstein2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D05034B919242A90007199CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06DF15E192436B500379369 /* TileSet.png in Resources */,
+				D05034DF19242A90007199CB /* Spaceship.png in Resources */,
+				D05034E119242A90007199CB /* Images.xcassets in Resources */,
+				D05034D719242A90007199CB /* Main_iPad.storyboard in Resources */,
+				D05034D419242A90007199CB /* Main_iPhone.storyboard in Resources */,
+				D05034CB19242A90007199CB /* InfoPlist.strings in Resources */,
+				D06DF15D192436B500379369 /* Test.tmx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05034E419242A90007199CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05034F219242A90007199CB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D05034B719242A90007199CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05034DD19242A90007199CB /* fraMyScene.m in Sources */,
+				D05034DA19242A90007199CB /* fraViewController.m in Sources */,
+				D05034D119242A90007199CB /* fraAppDelegate.m in Sources */,
+				D05034CD19242A90007199CB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05034E219242A90007199CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05034F419242A90007199CB /* Frankenstein2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D05034EC19242A90007199CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D05034BA19242A90007199CB /* Frankenstein2 */;
+			targetProxy = D05034EB19242A90007199CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D05034C919242A90007199CB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05034CA19242A90007199CB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D05034D219242A90007199CB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05034D319242A90007199CB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D05034D519242A90007199CB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05034D619242A90007199CB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		D05034F019242A90007199CB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05034F119242A90007199CB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D05034F519242A90007199CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D05034F619242A90007199CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D05034F819242A90007199CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Frankenstein2/Frankenstein2-Prefix.pch";
+				INFOPLIST_FILE = "Frankenstein2/Frankenstein2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D05034F919242A90007199CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Frankenstein2/Frankenstein2-Prefix.pch";
+				INFOPLIST_FILE = "Frankenstein2/Frankenstein2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D05034FB19242A90007199CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Frankenstein2.app/Frankenstein2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Frankenstein2/Frankenstein2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Frankenstein2Tests/Frankenstein2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D05034FC19242A90007199CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Frankenstein2.app/Frankenstein2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Frankenstein2/Frankenstein2-Prefix.pch";
+				INFOPLIST_FILE = "Frankenstein2Tests/Frankenstein2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D05034B619242A90007199CB /* Build configuration list for PBXProject "Frankenstein2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05034F519242A90007199CB /* Debug */,
+				D05034F619242A90007199CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D05034F719242A90007199CB /* Build configuration list for PBXNativeTarget "Frankenstein2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05034F819242A90007199CB /* Debug */,
+				D05034F919242A90007199CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D05034FA19242A90007199CB /* Build configuration list for PBXNativeTarget "Frankenstein2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05034FB19242A90007199CB /* Debug */,
+				D05034FC19242A90007199CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D05034B319242A90007199CB /* Project object */;
+}
