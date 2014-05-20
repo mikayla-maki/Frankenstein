@@ -47,15 +47,6 @@
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
     
-    
-    
-    
-    int a[] = {2,3};
-    
-    //a[1]; = (a + 10)
-    //[1]a; = (10 + a)
-    
-    
 }
 
 @end

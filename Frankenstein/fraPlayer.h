@@ -9,5 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface fraPlayer : SKSpriteNode
+@property (nonatomic, assign) CGPoint desiredPosition;
+//The velocity in the x and the y directions
+@property (nonatomic, assign) CGPoint velocity;
 
 @end
