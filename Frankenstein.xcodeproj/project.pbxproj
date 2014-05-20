@@ -34,10 +34,10 @@
 		D07E6033192C020E004D1197 /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6028192C020E004D1197 /* SKTAudio.m */; };
 		D07E6034192C020E004D1197 /* SKTEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E602A192C020E004D1197 /* SKTEffects.m */; };
 		D07E6035192C020E004D1197 /* SKTTimingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E602C192C020E004D1197 /* SKTTimingFunctions.m */; };
-		D07E603F192C049C004D1197 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E603C192C049C004D1197 /* JSTileMap.m */; };
-		D07E6040192C049C004D1197 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E603E192C049C004D1197 /* LFCGzipUtility.m */; };
 		D07E6045192C0645004D1197 /* devRoomTileset.png in Resources */ = {isa = PBXBuildFile; fileRef = D07E6043192C0645004D1197 /* devRoomTileset.png */; };
 		D07E6046192C0645004D1197 /* devRoom.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D07E6044192C0645004D1197 /* devRoom.tmx */; };
+		D07E604A192C11A4004D1197 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6049192C11A4004D1197 /* LFCGzipUtility.m */; };
+		D07E604D192C11AF004D1197 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E604C192C11AF004D1197 /* JSTileMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,12 +94,12 @@
 		D07E602B192C020E004D1197 /* SKTTimingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTTimingFunctions.h; sourceTree = "<group>"; };
 		D07E602C192C020E004D1197 /* SKTTimingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTTimingFunctions.m; sourceTree = "<group>"; };
 		D07E602D192C020E004D1197 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
-		D07E603B192C049C004D1197 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
-		D07E603C192C049C004D1197 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
-		D07E603D192C049C004D1197 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
-		D07E603E192C049C004D1197 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
 		D07E6043192C0645004D1197 /* devRoomTileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devRoomTileset.png; sourceTree = "<group>"; };
 		D07E6044192C0645004D1197 /* devRoom.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = devRoom.tmx; sourceTree = "<group>"; };
+		D07E6048192C11A4004D1197 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		D07E6049192C11A4004D1197 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		D07E604B192C11AF004D1197 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
+		D07E604C192C11AF004D1197 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 		D06DF1771925C74900379369 /* Frankenstein */ = {
 			isa = PBXGroup;
 			children = (
-				D07E603A192C049C004D1197 /* JSTileMap */,
+				D07E6047192C1183004D1197 /* JSTileMap */,
 				D07E6038192C024D004D1197 /* RayWenderlich */,
 				D07E6016192C019D004D1197 /* fraPlayer.h */,
 				D07E6017192C019D004D1197 /* fraPlayer.m */,
@@ -242,17 +242,6 @@
 			name = RayWenderlich;
 			sourceTree = "<group>";
 		};
-		D07E603A192C049C004D1197 /* JSTileMap */ = {
-			isa = PBXGroup;
-			children = (
-				D07E603B192C049C004D1197 /* JSTileMap.h */,
-				D07E603C192C049C004D1197 /* JSTileMap.m */,
-				D07E603D192C049C004D1197 /* LFCGzipUtility.h */,
-				D07E603E192C049C004D1197 /* LFCGzipUtility.m */,
-			);
-			path = JSTileMap;
-			sourceTree = "<group>";
-		};
 		D07E6042192C0645004D1197 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +250,17 @@
 			);
 			name = Assets;
 			path = ../Assets;
+			sourceTree = "<group>";
+		};
+		D07E6047192C1183004D1197 /* JSTileMap */ = {
+			isa = PBXGroup;
+			children = (
+				D07E604B192C11AF004D1197 /* JSTileMap.h */,
+				D07E604C192C11AF004D1197 /* JSTileMap.m */,
+				D07E6048192C11A4004D1197 /* LFCGzipUtility.h */,
+				D07E6049192C11A4004D1197 /* LFCGzipUtility.m */,
+			);
+			name = JSTileMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,16 +369,16 @@
 				D07E6033192C020E004D1197 /* SKTAudio.m in Sources */,
 				D07E6035192C020E004D1197 /* SKTTimingFunctions.m in Sources */,
 				D07E602F192C020E004D1197 /* SKAction+SKTSpecialEffects.m in Sources */,
+				D07E604A192C11A4004D1197 /* LFCGzipUtility.m in Sources */,
 				D07E6030192C020E004D1197 /* SKEmitterNode+SKTExtras.m in Sources */,
+				D07E604D192C11AF004D1197 /* JSTileMap.m in Sources */,
 				D06DF18B1925C74900379369 /* fraViewController.m in Sources */,
-				D07E603F192C049C004D1197 /* JSTileMap.m in Sources */,
 				D06DF1821925C74900379369 /* fraAppDelegate.m in Sources */,
 				D07E602E192C020E004D1197 /* SKAction+SKTExtras.m in Sources */,
 				D07E6031192C020E004D1197 /* SKNode+SKTDebugDraw.m in Sources */,
 				D07E6034192C020E004D1197 /* SKTEffects.m in Sources */,
 				D07E6032192C020E004D1197 /* SKNode+SKTExtras.m in Sources */,
 				D07E6018192C019D004D1197 /* fraPlayer.m in Sources */,
-				D07E6040192C049C004D1197 /* LFCGzipUtility.m in Sources */,
 				D06DF17E1925C74900379369 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
