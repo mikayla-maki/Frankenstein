@@ -26,7 +26,6 @@
 		D06DF1A31925C74900379369 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D06DF1A11925C74900379369 /* InfoPlist.strings */; };
 		D06DF1A51925C74900379369 /* FrankensteinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DF1A41925C74900379369 /* FrankensteinTests.m */; };
 		D07E6018192C019D004D1197 /* fraPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6017192C019D004D1197 /* fraPlayer.m */; };
-		D07E601B192C01FD004D1197 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E601A192C01FD004D1197 /* JSTileMap.m */; };
 		D07E602E192C020E004D1197 /* SKAction+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E601E192C020E004D1197 /* SKAction+SKTExtras.m */; };
 		D07E602F192C020E004D1197 /* SKAction+SKTSpecialEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6020192C020E004D1197 /* SKAction+SKTSpecialEffects.m */; };
 		D07E6030192C020E004D1197 /* SKEmitterNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6022192C020E004D1197 /* SKEmitterNode+SKTExtras.m */; };
@@ -35,6 +34,10 @@
 		D07E6033192C020E004D1197 /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6028192C020E004D1197 /* SKTAudio.m */; };
 		D07E6034192C020E004D1197 /* SKTEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E602A192C020E004D1197 /* SKTEffects.m */; };
 		D07E6035192C020E004D1197 /* SKTTimingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E602C192C020E004D1197 /* SKTTimingFunctions.m */; };
+		D07E603F192C049C004D1197 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E603C192C049C004D1197 /* JSTileMap.m */; };
+		D07E6040192C049C004D1197 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E603E192C049C004D1197 /* LFCGzipUtility.m */; };
+		D07E6045192C0645004D1197 /* devRoomTileset.png in Resources */ = {isa = PBXBuildFile; fileRef = D07E6043192C0645004D1197 /* devRoomTileset.png */; };
+		D07E6046192C0645004D1197 /* devRoom.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D07E6044192C0645004D1197 /* devRoom.tmx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +77,6 @@
 		D06DF1A41925C74900379369 /* FrankensteinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrankensteinTests.m; sourceTree = "<group>"; };
 		D07E6016192C019D004D1197 /* fraPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fraPlayer.h; sourceTree = "<group>"; };
 		D07E6017192C019D004D1197 /* fraPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fraPlayer.m; sourceTree = "<group>"; };
-		D07E6019192C01FD004D1197 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
-		D07E601A192C01FD004D1197 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
 		D07E601D192C020E004D1197 /* SKAction+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKAction+SKTExtras.h"; sourceTree = "<group>"; };
 		D07E601E192C020E004D1197 /* SKAction+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKAction+SKTExtras.m"; sourceTree = "<group>"; };
 		D07E601F192C020E004D1197 /* SKAction+SKTSpecialEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKAction+SKTSpecialEffects.h"; sourceTree = "<group>"; };
@@ -93,6 +94,12 @@
 		D07E602B192C020E004D1197 /* SKTTimingFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTTimingFunctions.h; sourceTree = "<group>"; };
 		D07E602C192C020E004D1197 /* SKTTimingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTTimingFunctions.m; sourceTree = "<group>"; };
 		D07E602D192C020E004D1197 /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		D07E603B192C049C004D1197 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
+		D07E603C192C049C004D1197 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
+		D07E603D192C049C004D1197 /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		D07E603E192C049C004D1197 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		D07E6043192C0645004D1197 /* devRoomTileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devRoomTileset.png; sourceTree = "<group>"; };
+		D07E6044192C0645004D1197 /* devRoom.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = devRoom.tmx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +161,8 @@
 		D06DF1771925C74900379369 /* Frankenstein */ = {
 			isa = PBXGroup;
 			children = (
+				D07E603A192C049C004D1197 /* JSTileMap */,
 				D07E6038192C024D004D1197 /* RayWenderlich */,
-				D07E6036192C0219004D1197 /* JSTileMap */,
 				D07E6016192C019D004D1197 /* fraPlayer.h */,
 				D07E6017192C019D004D1197 /* fraPlayer.m */,
 				D06DF1801925C74900379369 /* fraAppDelegate.h */,
@@ -167,6 +174,7 @@
 				D06DF18C1925C74900379369 /* fraMyScene.h */,
 				D06DF18D1925C74900379369 /* fraMyScene.m */,
 				D06DF18F1925C74900379369 /* Spaceship.png */,
+				D07E6042192C0645004D1197 /* Assets */,
 				D06DF1911925C74900379369 /* Images.xcassets */,
 				D06DF1781925C74900379369 /* Supporting Files */,
 			);
@@ -226,21 +234,33 @@
 			path = SKTUtils;
 			sourceTree = "<group>";
 		};
-		D07E6036192C0219004D1197 /* JSTileMap */ = {
-			isa = PBXGroup;
-			children = (
-				D07E6019192C01FD004D1197 /* JSTileMap.h */,
-				D07E601A192C01FD004D1197 /* JSTileMap.m */,
-			);
-			name = JSTileMap;
-			sourceTree = "<group>";
-		};
 		D07E6038192C024D004D1197 /* RayWenderlich */ = {
 			isa = PBXGroup;
 			children = (
 				D07E601C192C020E004D1197 /* SKTUtils */,
 			);
 			name = RayWenderlich;
+			sourceTree = "<group>";
+		};
+		D07E603A192C049C004D1197 /* JSTileMap */ = {
+			isa = PBXGroup;
+			children = (
+				D07E603B192C049C004D1197 /* JSTileMap.h */,
+				D07E603C192C049C004D1197 /* JSTileMap.m */,
+				D07E603D192C049C004D1197 /* LFCGzipUtility.h */,
+				D07E603E192C049C004D1197 /* LFCGzipUtility.m */,
+			);
+			path = JSTileMap;
+			sourceTree = "<group>";
+		};
+		D07E6042192C0645004D1197 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D07E6043192C0645004D1197 /* devRoomTileset.png */,
+				D07E6044192C0645004D1197 /* devRoom.tmx */,
+			);
+			name = Assets;
+			path = ../Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,10 +340,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07E6046192C0645004D1197 /* devRoom.tmx in Resources */,
 				D06DF1901925C74900379369 /* Spaceship.png in Resources */,
 				D06DF1921925C74900379369 /* Images.xcassets in Resources */,
 				D06DF1881925C74900379369 /* Main_iPad.storyboard in Resources */,
 				D06DF1851925C74900379369 /* Main_iPhone.storyboard in Resources */,
+				D07E6045192C0645004D1197 /* devRoomTileset.png in Resources */,
 				D06DF17C1925C74900379369 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,13 +371,14 @@
 				D07E602F192C020E004D1197 /* SKAction+SKTSpecialEffects.m in Sources */,
 				D07E6030192C020E004D1197 /* SKEmitterNode+SKTExtras.m in Sources */,
 				D06DF18B1925C74900379369 /* fraViewController.m in Sources */,
+				D07E603F192C049C004D1197 /* JSTileMap.m in Sources */,
 				D06DF1821925C74900379369 /* fraAppDelegate.m in Sources */,
 				D07E602E192C020E004D1197 /* SKAction+SKTExtras.m in Sources */,
 				D07E6031192C020E004D1197 /* SKNode+SKTDebugDraw.m in Sources */,
 				D07E6034192C020E004D1197 /* SKTEffects.m in Sources */,
 				D07E6032192C020E004D1197 /* SKNode+SKTExtras.m in Sources */,
-				D07E601B192C01FD004D1197 /* JSTileMap.m in Sources */,
 				D07E6018192C019D004D1197 /* fraPlayer.m in Sources */,
+				D07E6040192C049C004D1197 /* LFCGzipUtility.m in Sources */,
 				D06DF17E1925C74900379369 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
