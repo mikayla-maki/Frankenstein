@@ -38,6 +38,7 @@
 		D07E6046192C0645004D1197 /* devRoom.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D07E6044192C0645004D1197 /* devRoom.tmx */; };
 		D07E604A192C11A4004D1197 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6049192C11A4004D1197 /* LFCGzipUtility.m */; };
 		D07E604D192C11AF004D1197 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E604C192C11AF004D1197 /* JSTileMap.m */; };
+		D07E604F192C15BC004D1197 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D07E604E192C15BC004D1197 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		D07E6049192C11A4004D1197 /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
 		D07E604B192C11AF004D1197 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
 		D07E604C192C11AF004D1197 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
+		D07E604E192C15BC004D1197 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07E604F192C15BC004D1197 /* libz.dylib in Frameworks */,
 				D06DF1721925C74900379369 /* CoreGraphics.framework in Frameworks */,
 				D06DF1741925C74900379369 /* UIKit.framework in Frameworks */,
 				D06DF1761925C74900379369 /* SpriteKit.framework in Frameworks */,
@@ -149,6 +152,7 @@
 		D06DF16E1925C74900379369 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D07E604E192C15BC004D1197 /* libz.dylib */,
 				D06DF16F1925C74900379369 /* Foundation.framework */,
 				D06DF1711925C74900379369 /* CoreGraphics.framework */,
 				D06DF1731925C74900379369 /* UIKit.framework */,

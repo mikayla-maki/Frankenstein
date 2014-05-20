@@ -11,8 +11,7 @@
 
 @implementation fraViewController
 
-- (void)viewDidLoad
-{
+- (void)viewWillLayoutSubviews {
     [super viewDidLoad];
 
     // Configure the view.
@@ -23,6 +22,9 @@
     // Create and configure the scene.
     SKScene * scene = [fraMyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    NSLog(@"Width: %f", skView.bounds.size.width);
+    NSLog(@"height: %f", skView.bounds.size.height);
     
     // Present the scene.
     [skView presentScene:scene];
