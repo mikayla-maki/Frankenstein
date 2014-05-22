@@ -17,7 +17,7 @@
 
 @implementation fraMyScene
 
--(id)initWithSize:(CGSize)size {    
+-(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
@@ -64,7 +64,44 @@
     //5
     [self.player update:delta];
     //[self.enemies update:delta player:self.player];
+}
+
+-(CGRect)tileRectFromTileCoords:(CGPoint)tileCoords {
+    float levelHeightInPixels = self.map.mapSize.height * self.map.tileSize.height;
+    CGPoint origin = CGPointMake(tileCoords.x * self.map.tileSize.width, levelHeightInPixels - ((tileCoords.y + 1) * self.map.tileSize.height));
+    return CGRectMake(origin.x, origin.y, self.map.tileSize.width, self.map.tileSize.height);
+}
+
+- (NSInteger)tileGIDAtTileCoord:(CGPoint)coord forLayer:(TMXLayer *)layer {
+    TMXLayerInfo *layerInfo = layer.layerInfo;
+    return [layerInfo tileGidAtCoord:coord];
+}
+
+- (void)checkForAndResolveCollisionsForPlayer:(Player *)player forLayer:(TMXLayer *)layer {
+    NSArray *indices = @[@13, @14, @1, @2, @4, @8, @7, @11, @0, @3, @12, @15]; //Order of collision resolution
     
+    for (NSInteger *tileIndex in indices) {
+        
+        //2
+        CGRect playerRect = [player collisionBoundingBox];
+        //3
+        CGPoint playerCoord = [layer coordForPoint:player.position];
+        //4
+        NSInteger tileColumn = tileIndex % 3;
+        NSInteger tileRow = tileIndex / 3;
+        CGPoint tileCoord = CGPointMake(playerCoord.x + (tileColumn - 1), playerCoord.y + (tileRow - 1));
+        //5
+        NSInteger gid = [self tileGIDAtTileCoord:tileCoord forLayer:layer];
+        //6
+        if (gid) {
+            //7
+            CGRect tileRect = [self tileRectFromTileCoords:tileCoord];
+            //8
+            NSLog(@"GID %ld, Tile Coord %@, Tile Rect %@, player rect %@", (long)gid, NSStringFromCGPoint(tileCoord), NSStringFromCGRect(tileRect), NSStringFromCGRect(playerRect));
+            //collision resolution goes here
+        }
+        
+    }
 }
 
 @end
