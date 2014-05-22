@@ -1,5 +1,4 @@
 //
-//  fraMyScene.h
 //  Frankenstein
 //
 

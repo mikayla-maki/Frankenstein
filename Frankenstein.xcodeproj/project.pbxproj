@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0254A78192C21030018B492 /* mouse_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0254A77192C21030018B492 /* mouse_1.png */; };
 		D06DF1701925C74900379369 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DF16F1925C74900379369 /* Foundation.framework */; };
 		D06DF1721925C74900379369 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DF1711925C74900379369 /* CoreGraphics.framework */; };
 		D06DF1741925C74900379369 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DF1731925C74900379369 /* UIKit.framework */; };
@@ -17,8 +18,7 @@
 		D06DF1851925C74900379369 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06DF1831925C74900379369 /* Main_iPhone.storyboard */; };
 		D06DF1881925C74900379369 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06DF1861925C74900379369 /* Main_iPad.storyboard */; };
 		D06DF18B1925C74900379369 /* fraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DF18A1925C74900379369 /* fraViewController.m */; };
-		D06DF18E1925C74900379369 /* fraMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DF18D1925C74900379369 /* fraMyScene.m */; };
-		D06DF1901925C74900379369 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = D06DF18F1925C74900379369 /* Spaceship.png */; };
+		D06DF18E1925C74900379369 /* fraDevRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = D06DF18D1925C74900379369 /* fraDevRoom.m */; };
 		D06DF1921925C74900379369 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06DF1911925C74900379369 /* Images.xcassets */; };
 		D06DF1991925C74900379369 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DF1981925C74900379369 /* XCTest.framework */; };
 		D06DF19A1925C74900379369 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DF16F1925C74900379369 /* Foundation.framework */; };
@@ -39,6 +39,7 @@
 		D07E604A192C11A4004D1197 /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E6049192C11A4004D1197 /* LFCGzipUtility.m */; };
 		D07E604D192C11AF004D1197 /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = D07E604C192C11AF004D1197 /* JSTileMap.m */; };
 		D07E604F192C15BC004D1197 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D07E604E192C15BC004D1197 /* libz.dylib */; };
+		D0849155192D46CA003878C7 /* fraPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = D0849154192D46CA003878C7 /* fraPhysics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0254A77192C21030018B492 /* mouse_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouse_1.png; path = Art/AnimationTests/player.atlas/mouse_1.png; sourceTree = SOURCE_ROOT; };
 		D06DF16C1925C74900379369 /* Frankenstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frankenstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06DF16F1925C74900379369 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D06DF1711925C74900379369 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,9 +69,8 @@
 		D06DF1871925C74900379369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		D06DF1891925C74900379369 /* fraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fraViewController.h; sourceTree = "<group>"; };
 		D06DF18A1925C74900379369 /* fraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fraViewController.m; sourceTree = "<group>"; };
-		D06DF18C1925C74900379369 /* fraMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fraMyScene.h; sourceTree = "<group>"; };
-		D06DF18D1925C74900379369 /* fraMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fraMyScene.m; sourceTree = "<group>"; };
-		D06DF18F1925C74900379369 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		D06DF18C1925C74900379369 /* fraDevRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fraDevRoom.h; sourceTree = "<group>"; };
+		D06DF18D1925C74900379369 /* fraDevRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fraDevRoom.m; sourceTree = "<group>"; };
 		D06DF1911925C74900379369 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D06DF1971925C74900379369 /* FrankensteinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrankensteinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06DF1981925C74900379369 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -102,6 +103,8 @@
 		D07E604B192C11AF004D1197 /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
 		D07E604C192C11AF004D1197 /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
 		D07E604E192C15BC004D1197 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D0849153192D46CA003878C7 /* fraPhysics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fraPhysics.h; sourceTree = "<group>"; };
+		D0849154192D46CA003878C7 /* fraPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fraPhysics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,17 +170,18 @@
 			children = (
 				D07E6047192C1183004D1197 /* JSTileMap */,
 				D07E6038192C024D004D1197 /* RayWenderlich */,
-				D07E6016192C019D004D1197 /* fraPlayer.h */,
-				D07E6017192C019D004D1197 /* fraPlayer.m */,
 				D06DF1801925C74900379369 /* fraAppDelegate.h */,
 				D06DF1811925C74900379369 /* fraAppDelegate.m */,
 				D06DF1831925C74900379369 /* Main_iPhone.storyboard */,
 				D06DF1861925C74900379369 /* Main_iPad.storyboard */,
 				D06DF1891925C74900379369 /* fraViewController.h */,
 				D06DF18A1925C74900379369 /* fraViewController.m */,
-				D06DF18C1925C74900379369 /* fraMyScene.h */,
-				D06DF18D1925C74900379369 /* fraMyScene.m */,
-				D06DF18F1925C74900379369 /* Spaceship.png */,
+				D07E6016192C019D004D1197 /* fraPlayer.h */,
+				D07E6017192C019D004D1197 /* fraPlayer.m */,
+				D06DF18C1925C74900379369 /* fraDevRoom.h */,
+				D06DF18D1925C74900379369 /* fraDevRoom.m */,
+				D0849153192D46CA003878C7 /* fraPhysics.h */,
+				D0849154192D46CA003878C7 /* fraPhysics.m */,
 				D07E6042192C0645004D1197 /* Assets */,
 				D06DF1911925C74900379369 /* Images.xcassets */,
 				D06DF1781925C74900379369 /* Supporting Files */,
@@ -249,6 +253,7 @@
 		D07E6042192C0645004D1197 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D0254A77192C21030018B492 /* mouse_1.png */,
 				D07E6043192C0645004D1197 /* devRoomTileset.png */,
 				D07E6044192C0645004D1197 /* devRoom.tmx */,
 			);
@@ -345,12 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07E6046192C0645004D1197 /* devRoom.tmx in Resources */,
-				D06DF1901925C74900379369 /* Spaceship.png in Resources */,
 				D06DF1921925C74900379369 /* Images.xcassets in Resources */,
 				D06DF1881925C74900379369 /* Main_iPad.storyboard in Resources */,
 				D06DF1851925C74900379369 /* Main_iPhone.storyboard in Resources */,
 				D07E6045192C0645004D1197 /* devRoomTileset.png in Resources */,
 				D06DF17C1925C74900379369 /* InfoPlist.strings in Resources */,
+				D0254A78192C21030018B492 /* mouse_1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +374,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06DF18E1925C74900379369 /* fraMyScene.m in Sources */,
+				D06DF18E1925C74900379369 /* fraDevRoom.m in Sources */,
 				D07E6033192C020E004D1197 /* SKTAudio.m in Sources */,
 				D07E6035192C020E004D1197 /* SKTTimingFunctions.m in Sources */,
+				D0849155192D46CA003878C7 /* fraPhysics.m in Sources */,
 				D07E602F192C020E004D1197 /* SKAction+SKTSpecialEffects.m in Sources */,
 				D07E604A192C11A4004D1197 /* LFCGzipUtility.m in Sources */,
 				D07E6030192C020E004D1197 /* SKEmitterNode+SKTExtras.m in Sources */,
