@@ -18,7 +18,11 @@
 @end                                                             //(on both sides)
 
 @implementation Player
-- (instancetype)initPlayer
++(instancetype)createPlayer{
+    return [[Player alloc] initPlayer];
+}
+
+-(instancetype)initPlayer
 {
     self = [super initWithImageNamed:@"mouse_1.png"];
     if (self) {
@@ -49,8 +53,10 @@
     self.desiredPosition = CGPointAdd(self.position, velocityStep);
 }
 
--(CGRect)collisionBoundingBox {
-    return CGRectInset(self.frame, self.CHANGE_IN_BOUNDING_BOX_X, self.CHANGE_IN_BOUNDING_BOX_Y);//
+- (CGRect)collisionBoundingBox {
+    CGRect boundingBox = CGRectInset(self.frame, self.CHANGE_IN_BOUNDING_BOX_X, self.CHANGE_IN_BOUNDING_BOX_Y);
+    CGPoint diff = CGPointSubtract(self.desiredPosition, self.position);
+    return CGRectOffset(boundingBox, diff.x, diff.y);
 }
 
 @end

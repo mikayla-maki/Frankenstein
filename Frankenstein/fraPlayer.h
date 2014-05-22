@@ -14,4 +14,5 @@
 -(id)initPlayer;
 -(void)update:(NSTimeInterval)delta;
 -(CGRect)collisionBoundingBox;
++(instancetype)createPlayer;
 @end

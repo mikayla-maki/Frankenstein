@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSTileMap.h"
+#import "fraPlayer.h"
 
-@interface fraPhysics : NSObject
-
+@interface Physics : NSObject
++(instancetype)createPhysicsWithMap:(JSTileMap*)map;
+-(void)resolveCollisionsWithLayer:(TMXLayer*)layer withPlayer:(Player*)player;
 @end
