@@ -24,9 +24,9 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.map = [JSTileMap mapNamed:@"devRoom.tmx"];
+        self.map = [JSTileMap mapNamed:@"1.2.3.tmx"];//CONFIG!
         [self addChild:self.map];
-        self.walls = [self.map layerNamed:@"walls"];
+        self.walls = [self.map layerNamed:@"map_stuff"];//CONFIG!
         
         [Physics createPhysicsWithMap:self.map];
         
@@ -68,9 +68,12 @@
     //4
     self.previousUpdateTime = currentTime;
     //5
+            NSLog(@"Update! (before player, fraDevRoom)");
     [self.player update:delta];
+        NSLog(@"Update! (after player, fraDevRoom)");
     //[self.enemies update:delta player:self.player];
     [self.physics resolveCollisionsWithLayer:self.walls withPlayer:self.player];
+            NSLog(@"Update! (after physics, fraDevRoom)");
     
 }
 

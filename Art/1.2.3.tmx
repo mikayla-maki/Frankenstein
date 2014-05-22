@@ -3,11 +3,6 @@
  <tileset firstgid="1" name="1.2.3" tilewidth="32" tileheight="32">
   <image source="1.2.3.png" trans="ff00ff" width="128" height="128"/>
  </tileset>
- <layer name="background" width="100" height="20">
-  <data encoding="base64" compression="zlib">
-   eJztwwENAAAMw6A6mH+3F3JIWDVVVVVVVVVVff4Agvh1MQ==
-  </data>
- </layer>
  <layer name="map_stuff" width="100" height="20">
   <data encoding="base64" compression="zlib">
    eJzt00kOgCAQRFF2znr/29obNyY4pElbwn9JbU3gS0r1GWyjrbP1zm9twavRYlsLfYsefvTQQg8t9NBCDy300EIPLfTQUrIH/OihhR5a6KGlpR5zZkre9Mid4+p8d2d/cjcR95drFd2rpffhFdHr3OPr/+PPFN4XcJiY1HajRhc7

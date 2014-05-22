@@ -40,7 +40,7 @@
 
 
 -(void)resolveCollisionsWithLayer:(TMXLayer*)layer withPlayer:(Player*)player {
-    NSLog(@"Update!");
+    NSLog(@"Update! (physics)");
     int DOWN_A = 13;
     int DOWN_B = 14;
     int UP_A = 1;

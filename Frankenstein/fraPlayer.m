@@ -41,13 +41,14 @@
 }
 
 - (void)update:(NSTimeInterval)delta withGravity:(CGPoint) gravity{
+            NSLog(@"Update! (player)");
     CGPoint gravityStep = CGPointMultiplyScalar(gravity, delta);
     self.velocity = CGPointAdd(self.velocity, gravityStep);
     CGPoint velocityStep = CGPointMultiplyScalar(self.velocity, delta); //Keeping it in line
     
-    velocityStep.x = MIN(velocityStep.x, self.X_LIMIT);//Applying the breaks
+    velocityStep.x = MIN(velocityStep.x, self.X_LIMIT);//Applying the brakes
     velocityStep.y = MIN(velocityStep.y, self.Y_LIMIT);
-    velocityStep.x = MAX(velocityStep.x, self.X_LIMIT);//Applying the breaks
+    velocityStep.x = MAX(velocityStep.x, self.X_LIMIT);
     velocityStep.y = MAX(velocityStep.y, self.Y_LIMIT);
     
     self.desiredPosition = CGPointAdd(self.position, velocityStep);
