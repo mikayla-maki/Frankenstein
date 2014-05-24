@@ -23,18 +23,20 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
-        
+        self.backgroundColor = [SKColor colorWithRed:.4 green:.4 blue:.95 alpha:1.0];
         self.map = [JSTileMap mapNamed:@"1.2.3.tmx"];//CONFIG!
         [self addChild:self.map];
         self.walls = [self.map layerNamed:@"map_stuff"];//CONFIG!
         
-        [Physics createPhysicsWithMap:self.map];
+        self.physics = [Physics createPhysicsWithMap:self.map];
         
         self.player = [Player createPlayer];
         self.player.position = CGPointMake(400, 400);//Start coordinates need to be saved somewhere
         self.player.zPosition = 15; //Make a heirarchy of constants to abstract this (FOREGROUND, BACKGROUND, etc.)
         
         [self.map addChild:self.player];
+        
+        
         
     }
     return self;
@@ -68,12 +70,9 @@
     //4
     self.previousUpdateTime = currentTime;
     //5
-            NSLog(@"Update! (before player, fraDevRoom)");
     [self.player update:delta];
-        NSLog(@"Update! (after player, fraDevRoom)");
     //[self.enemies update:delta player:self.player];
     [self.physics resolveCollisionsWithLayer:self.walls withPlayer:self.player];
-            NSLog(@"Update! (after physics, fraDevRoom)");
     
 }
 

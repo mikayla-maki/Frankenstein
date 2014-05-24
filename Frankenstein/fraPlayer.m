@@ -18,11 +18,11 @@
 @end                                                             //(on both sides)
 
 @implementation Player
-+(instancetype)createPlayer{
-    return [[Player alloc] initPlayer];
++(id)createPlayer{
+    return [[self alloc] initPlayer];
 }
 
--(instancetype)initPlayer
+-(id)initPlayer
 {
     self = [super initWithImageNamed:@"mouse_1.png"];
     if (self) {

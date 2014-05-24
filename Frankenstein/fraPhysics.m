@@ -15,13 +15,13 @@
 @implementation Physics
 
 
-+(instancetype)createPhysicsWithMap:(JSTileMap *)map {
++(id)createPhysicsWithMap:(JSTileMap *)map {
     return [[self alloc] initWithMap: map];
 }
 
--(instancetype) initWithMap:(JSTileMap *)map {
+-(id) initWithMap:(JSTileMap *)map {
     self = [super init];
-    if (self) {
+    if (self != nil) {
         self.map = map;
     }
     return self;
@@ -40,7 +40,6 @@
 
 
 -(void)resolveCollisionsWithLayer:(TMXLayer*)layer withPlayer:(Player*)player {
-    NSLog(@"Update! (physics)");
     int DOWN_A = 13;
     int DOWN_B = 14;
     int UP_A = 1;
@@ -70,7 +69,7 @@
 
             CGRect tileRect = [self tileRectFromTileCoords:tileCoord];
 
-            NSLog(@"GID %ld, Tile Coord %@, Tile Rect %@, player rect %@", (long)gid, NSStringFromCGPoint(tileCoord), NSStringFromCGRect(tileRect), NSStringFromCGRect(playerRect));
+            //            NSLog(@"GID %ld, Tile Coord %@, Tile Rect %@, player rect %@", (long)gid, NSStringFromCGPoint(tileCoord), NSStringFromCGRect(tileRect), NSStringFromCGRect(playerRect));
             //BEGIN COLLISION RESOLUTION
             //1
             if (CGRectIntersectsRect(playerRect, tileRect)) {
@@ -117,6 +116,7 @@
     }
     player.position = player.desiredPosition;
     //END COLLISION RESOLUTION
+    return;
 }
 
 @end

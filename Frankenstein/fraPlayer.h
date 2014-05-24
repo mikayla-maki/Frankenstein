@@ -10,6 +10,7 @@
 
 @interface Player : SKSpriteNode
 @property (nonatomic, assign) CGPoint desiredPosition;
+@property (nonatomic, assign) BOOL onGround;
 @property (nonatomic, assign) CGPoint velocity;
 -(id)initPlayer;
 -(void)update:(NSTimeInterval)delta;
