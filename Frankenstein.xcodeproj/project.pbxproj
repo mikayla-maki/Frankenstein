@@ -10,6 +10,8 @@
 		D000B7CB192E4832001219B9 /* 1.2.3.png in Resources */ = {isa = PBXBuildFile; fileRef = D000B7C9192E4832001219B9 /* 1.2.3.png */; };
 		D000B7CC192E4832001219B9 /* 1.2.3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D000B7CA192E4832001219B9 /* 1.2.3.tmx */; };
 		D000B7CE192E4839001219B9 /* Bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D000B7CD192E4839001219B9 /* Bg.png */; };
+		D020886D19312D54009DEB04 /* tiles.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D020886C19312D54009DEB04 /* tiles.tmx */; };
+		D020886F19312D6B009DEB04 /* btiles2032.png in Resources */ = {isa = PBXBuildFile; fileRef = D020886E19312D6B009DEB04 /* btiles2032.png */; };
 		D0254A78192C21030018B492 /* mouse_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0254A77192C21030018B492 /* mouse_1.png */; };
 		D06DF1701925C74900379369 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DF16F1925C74900379369 /* Foundation.framework */; };
 		D06DF1721925C74900379369 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06DF1711925C74900379369 /* CoreGraphics.framework */; };
@@ -59,6 +61,8 @@
 		D000B7C9192E4832001219B9 /* 1.2.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.2.3.png; path = Art/1.2.3.png; sourceTree = SOURCE_ROOT; };
 		D000B7CA192E4832001219B9 /* 1.2.3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = 1.2.3.tmx; path = Art/1.2.3.tmx; sourceTree = SOURCE_ROOT; };
 		D000B7CD192E4839001219B9 /* Bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bg.png; path = Art/Bg.png; sourceTree = SOURCE_ROOT; };
+		D020886C19312D54009DEB04 /* tiles.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = tiles.tmx; path = Assets/tiles.tmx; sourceTree = SOURCE_ROOT; };
+		D020886E19312D6B009DEB04 /* btiles2032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btiles2032.png; path = ../../../../Downloads/btiles2032.png; sourceTree = "<group>"; };
 		D0254A77192C21030018B492 /* mouse_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mouse_1.png; path = Art/AnimationTests/player.atlas/mouse_1.png; sourceTree = SOURCE_ROOT; };
 		D06DF16C1925C74900379369 /* Frankenstein.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frankenstein.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06DF16F1925C74900379369 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -259,6 +263,8 @@
 		D07E6042192C0645004D1197 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D020886C19312D54009DEB04 /* tiles.tmx */,
+				D020886E19312D6B009DEB04 /* btiles2032.png */,
 				D0254A77192C21030018B492 /* mouse_1.png */,
 				D07E6043192C0645004D1197 /* devRoomTileset.png */,
 				D07E6044192C0645004D1197 /* devRoom.tmx */,
@@ -365,9 +371,11 @@
 				D06DF1851925C74900379369 /* Main_iPhone.storyboard in Resources */,
 				D000B7CC192E4832001219B9 /* 1.2.3.tmx in Resources */,
 				D07E6045192C0645004D1197 /* devRoomTileset.png in Resources */,
+				D020886F19312D6B009DEB04 /* btiles2032.png in Resources */,
 				D06DF17C1925C74900379369 /* InfoPlist.strings in Resources */,
 				D000B7CB192E4832001219B9 /* 1.2.3.png in Resources */,
 				D0254A78192C21030018B492 /* mouse_1.png in Resources */,
+				D020886D19312D54009DEB04 /* tiles.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

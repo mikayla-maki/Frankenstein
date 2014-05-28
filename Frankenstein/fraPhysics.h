@@ -11,6 +11,10 @@
 #import "fraPlayer.h"
 
 @interface Physics : NSObject
+@property (nonatomic, assign, readonly) CGPoint GRAVITY;
+@property (nonatomic, assign, readonly) NSInteger X_LIMIT;
+@property (nonatomic, assign, readonly) NSInteger Y_LIMIT;
 +(instancetype)createPhysicsWithMap:(JSTileMap*)map;
 -(void)resolveCollisionsWithLayer:(TMXLayer*)layer withPlayer:(Player*)player;
+-(NSInteger)getFrictionForNode:(SKNode*) node;
 @end

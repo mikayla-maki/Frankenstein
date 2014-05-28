@@ -14,6 +14,23 @@
 
 @implementation Physics
 
+//Returns a value between 1 and 0 representing the friction coefficient
+-(NSInteger)getFrictionForNode:(SKNode *)node {
+    return 0.9;
+}
+
+-(CGPoint)GRAVITY {
+    return CGPointMake(0.0, -450); //in points per second
+};
+
+-(NSInteger)X_LIMIT {
+    return 700; //in points per second
+};
+
+-(NSInteger)Y_LIMIT {
+    return 700; //in points per second
+};
+
 
 +(id)createPhysicsWithMap:(JSTileMap *)map {
     return [[self alloc] initWithMap: map];
@@ -38,7 +55,9 @@
 }
 
 
-
+/*
+ This method is terrible. Fix it later
+ */
 -(void)resolveCollisionsWithLayer:(TMXLayer*)layer withPlayer:(Player*)player {
     int DOWN_A = 13;
     int DOWN_B = 14;
@@ -69,7 +88,6 @@
 
             CGRect tileRect = [self tileRectFromTileCoords:tileCoord];
 
-            //            NSLog(@"GID %ld, Tile Coord %@, Tile Rect %@, player rect %@", (long)gid, NSStringFromCGPoint(tileCoord), NSStringFromCGRect(tileRect), NSStringFromCGRect(playerRect));
             //BEGIN COLLISION RESOLUTION
             //1
             if (CGRectIntersectsRect(playerRect, tileRect)) {
@@ -78,9 +96,11 @@
                 if (tileIndex == DOWN_A || tileIndex == DOWN_B) {
                     //tile is directly below player
                     player.desiredPosition = CGPointMake(player.desiredPosition.x, player.desiredPosition.y + intersection.size.height);
+                    player.velocity = CGPointMake(player.velocity.x, 0);
                 } else if (tileIndex == UP_A || tileIndex == UP_B) {
                     //tile is directly above player
                     player.desiredPosition = CGPointMake(player.desiredPosition.x, player.desiredPosition.y - intersection.size.height);
+                    player.velocity = CGPointMake(player.velocity.x, 0);
                 } else if (tileIndex == LEFT_A || tileIndex == LEFT_B) {
                     //tile is left of player
                     player.desiredPosition = CGPointMake(player.desiredPosition.x + intersection.size.width, player.desiredPosition.y);

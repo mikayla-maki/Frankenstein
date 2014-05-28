@@ -31,8 +31,8 @@
         self.physics = [Physics createPhysicsWithMap:self.map];
         
         self.player = [Player createPlayer];
-        self.player.position = CGPointMake(400, 400);//Start coordinates need to be saved somewhere
-        self.player.zPosition = 15; //Make a heirarchy of constants to abstract this (FOREGROUND, BACKGROUND, etc.)
+        self.player.position = CGPointMake(100,100);//Start coordinates need to be saved somewhere
+        self.player.zPosition = 20; //Make a heirarchy of constants to abstract this (FOREGROUND, BACKGROUND, etc.)
         
         [self.map addChild:self.player];
         
@@ -40,24 +40,6 @@
         
     }
     return self;
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -70,10 +52,36 @@
     //4
     self.previousUpdateTime = currentTime;
     //5
-    [self.player update:delta];
+    [self.player update:delta withPhysics:self.physics];
     //[self.enemies update:delta player:self.player];
     [self.physics resolveCollisionsWithLayer:self.walls withPlayer:self.player];
-    
+}
+
+- (void)movePlayer:(UITouch *)touch
+{
+    CGPoint touchLocation = [touch locationInNode:self];
+    if (touchLocation.x > self.size.width / 2.0) {
+        [self.player moveLeft];
+    } else {
+        [self.player moveRight];
+    }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    for (UITouch *touch in touches) {
+        [self movePlayer:touch];
+    }
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    for (UITouch *touch in touches) {
+        [self movePlayer:touch];
+    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.player stop];
 }
 
 @end
