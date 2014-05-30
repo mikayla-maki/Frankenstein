@@ -16,11 +16,17 @@
 @property (nonatomic, assign, readonly) CGPoint LEFT_VELOCITY;
 @property (nonatomic) BOOL moveRightB;
 @property (nonatomic) BOOL moveLeftB;
+@property (nonatomic) SKSpriteNode* box;
 @property (nonatomic, assign) NSInteger CHANGE_IN_BOUNDING_BOX_X;//Changes the bounding
 @property (nonatomic, assign) NSInteger CHANGE_IN_BOUNDING_BOX_Y;//box by this number of points
 @end                                                             //(on both sides)
 
 @implementation Player
+
++(id)createPlayerWithNode:(SKSpriteNode *)node {
+    return [[self alloc] initPlayerWithBox:node];
+}
+
 +(id)createPlayer{
     return [[self alloc] initPlayer];
 }
@@ -30,11 +36,11 @@
 }
 
 -(CGPoint)LEFT_VELOCITY {
-    return CGPointMake(500, 0);
+    return CGPointMake(9000, 0);
 }
 
 -(CGPoint)RIGHT_VELOCITY {
-    return CGPointMake(450, 0);
+    return CGPointMake(-9000, 0);
 }
 -(void)stop {
     self.moveLeftB = NO;
@@ -52,7 +58,7 @@
 
 -(id)initPlayer
 {
-    self = [super initWithImageNamed:@"mouse_1.png"];
+    self = [super initWithImageNamed:@"character_normal.png"];
     if (self) {
         self.velocity = CGPointMake(0.0, 0.0);
         self.CHANGE_IN_BOUNDING_BOX_X = 0;
@@ -60,6 +66,22 @@
     }
     return self;
 }
+
+-(id)initPlayerWithBox:(SKSpriteNode*)node
+{
+    self = [super initWithImageNamed:@"character_normal.png"];
+    if (self) {
+        self.velocity = CGPointMake(0.0, 0.0);
+        self.CHANGE_IN_BOUNDING_BOX_X = 0;
+        self.CHANGE_IN_BOUNDING_BOX_Y = 0;
+        self.box = node;
+        [self collisionBoundingBox];
+    }
+    return self;
+}
+
+
+
 
 -(long)putInRangeForVal:(long)val withMin:(long)min withMax:(long)max {
     if (val > max) {
@@ -83,22 +105,29 @@
         movementStep = CGPointMake(0, 0);
     }
     
-    self.velocity = CGPointAdd(CGPointAdd(self.velocity, gravityStep), movementStep);
+    movementStep = CGPointMultiplyScalar(movementStep, delta);
 
-    CGPoint velocityStep = CGPointMultiplyScalar(CGPointMultiplyScalar(self.velocity, delta), [physics getFrictionForNode:self]); //Keeping it in line + friction
+    //Velocity = ((Velocity + gravity step) + movement step) * friction
+    self.velocity = CGPointAdd(self.velocity, gravityStep);
+    self.velocity = CGPointAdd(self.velocity, movementStep);
+    self.velocity = CGPointMultiplyScalar(self.velocity, [[physics getFrictionForNode:self] floatValue]);
     
-    velocityStep.x = Clamp(velocityStep.x, -physics.X_LIMIT, physics.X_LIMIT);
-    velocityStep.y = Clamp(velocityStep.y, -physics.Y_LIMIT, physics.Y_LIMIT);
-    
-    self.desiredPosition = CGPointAdd(self.position, velocityStep);
+    self.velocity = CGPointMake(Clamp(self.velocity.x, -physics.X_LIMIT, physics.X_LIMIT), Clamp(self.velocity.y, -physics.Y_LIMIT, physics.Y_LIMIT)); //Clamping the x and y to a limit
+        
+    self.desiredPosition = CGPointAdd(self.position, self.velocity);
+    self.box.position = CGPointAdd(self.position, self.velocity);
+
 }
 
 
 
 - (CGRect)collisionBoundingBox {
+
     CGRect boundingBox = CGRectInset(self.frame, self.CHANGE_IN_BOUNDING_BOX_X, self.CHANGE_IN_BOUNDING_BOX_Y);
     CGPoint diff = CGPointSubtract(self.desiredPosition, self.position);
-    return CGRectOffset(boundingBox, diff.x, diff.y);
+    CGRect final = CGRectOffset(boundingBox, diff.x, diff.y);
+    self.box.size = CGSizeMake(final.size.width, final.size.height);
+    return final;
 }
 
 @end

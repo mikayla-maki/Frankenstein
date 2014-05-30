@@ -20,4 +20,6 @@
 -(void)update:(NSTimeInterval)delta withPhysics:(Physics*)physics;
 -(CGRect)collisionBoundingBox;
 +(instancetype)createPlayer;
++(instancetype)createPlayerWithNode:(SKSpriteNode*)node;
+
 @end

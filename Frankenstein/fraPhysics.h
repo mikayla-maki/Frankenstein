@@ -16,5 +16,8 @@
 @property (nonatomic, assign, readonly) NSInteger Y_LIMIT;
 +(instancetype)createPhysicsWithMap:(JSTileMap*)map;
 -(void)resolveCollisionsWithLayer:(TMXLayer*)layer withPlayer:(Player*)player;
--(NSInteger)getFrictionForNode:(SKNode*) node;
+
++ (Physics *)createPhysicsWithMap:(JSTileMap *)map andArr:(NSArray *)arr;
+
+-(NSNumber*)getFrictionForNode:(SKNode*) node;
 @end
