@@ -1,5 +1,5 @@
 Problem comes from sprite in a position where there is a block two above it and the player pushes into it for a short time.
-More data, when
+More data, when ;
 
 
 starting...

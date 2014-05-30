@@ -81,6 +81,7 @@
  This method is terrible. It manually manages collisions. I need to modify it to send out events involving the two
  types of collidees. Then I can ask them how to proceed
  */
+
 - (void)resolveCollisionsWithLayer:(TMXLayer *)layer withPlayer:(Player *)player {
     //NSInteger gid = [self tileGIDAtTileCoord:CGPointMake(99, 19) forLayer:layer];
     int DOWN_A = 13;
@@ -104,84 +105,82 @@
     12 13 14  15
     The tiles with p are assumed to be the players coordinates
      */
-    //THIS IS NOT WORKING AT ALL. Players top can go right through everything
     int indices[12] = {DOWN_A, DOWN_B, UP_A, UP_B, LEFT_A, LEFT_B, RIGHT_A, RIGHT_B, UP_LEFT, UP_RIGHT, DOWN_LEFT, DOWN_RIGHT}; //Order of collision resolution
-    NSLog(@"starting...");
 
-    for (int i = 0; i < indiceLength; i++) {
-        int tileIndex = indices[i];
-        NSLog(@"Current index: %d", tileIndex);
-        NSInteger tileColumn = tileIndex % 4;
-        NSInteger tileRow = tileIndex / 4;
-        CGPoint playerCoord = [layer coordForPoint:player.desiredPosition]; //We do this here because previous operations
-        // could have changed desired position
-        NSLog(@"Player coord: (%f,%f)", playerCoord.x, playerCoord.y);
-        NSLog(@"Player velocity: (%f,%f)", player.velocity.x, player.velocity.y);
 
-        CGRect playerRect = [player collisionBoundingBox]; // Same goes for this
+    //This whole thing is a mess. I probably need to write my own don't I?
+    /*
+    player.onGround = NO;  ////Here
+    for (NSUInteger i = 0; i < 12; i++) {
+        NSInteger tileIndex = indices[i];
 
-        NSLog(@"examinedTile (x,y): (%f,%f)", playerCoord.x + (tileColumn - 1), playerCoord.y + (tileRow - 1));
+        CGRect playerRect = [player collisionBoundingBox];
+        CGPoint playerCoord = [layer coordForPoint:player.desiredPosition];
+
+        NSInteger tileColumn = tileIndex % 3;
+        NSInteger tileRow = tileIndex / 3;
         CGPoint tileCoord = CGPointMake(playerCoord.x + (tileColumn - 1), playerCoord.y + (tileRow - 1));
+
         NSInteger gid = [self tileGIDAtTileCoord:tileCoord forLayer:layer];
-
-        if (gid) {
-
+        if (gid != 0) {
             CGRect tileRect = [self tileRectFromTileCoords:tileCoord];
-
-            //BEGIN COLLISION RESOLUTION
+            //NSLog(@"GID %ld, Tile Coord %@, Tile Rect %@, player rect %@", (long)gid, NSStringFromCGPoint(tileCoord), NSStringFromCGRect(tileRect), NSStringFromCGRect(playerRect));
             //1
             if (CGRectIntersectsRect(playerRect, tileRect)) {
                 CGRect intersection = CGRectIntersection(playerRect, tileRect);
                 //2
                 if (tileIndex == DOWN_A || tileIndex == DOWN_B) {
-                    //tile is directly below player
+                    //tile is directly below Koala
                     player.desiredPosition = CGPointMake(player.desiredPosition.x, player.desiredPosition.y + intersection.size.height);
-                    player.velocity = CGPointMake(player.velocity.x, 0);
+                    player.velocity = CGPointMake(player.velocity.x, 0.0); ////Here
+                    player.onGround = YES; ////Here
                 } else if (tileIndex == UP_A || tileIndex == UP_B) {
-                    //tile is directly above player
+                    //tile is directly above Koala
                     player.desiredPosition = CGPointMake(player.desiredPosition.x, player.desiredPosition.y - intersection.size.height);
-                    player.velocity = CGPointMake(player.velocity.x, 0);
                 } else if (tileIndex == LEFT_A || tileIndex == LEFT_B) {
-                    //tile is left of player
+                    //tile is left of Koala
                     player.desiredPosition = CGPointMake(player.desiredPosition.x + intersection.size.width, player.desiredPosition.y);
-                    player.velocity = CGPointMake(0, player.velocity.y);
+                    NSLog(@"HERE Left");
+                    player.velocity = CGPointMake(0, player.velocity.y); ////Here
                 } else if (tileIndex == RIGHT_A || tileIndex == RIGHT_B) {
-                    //tile is right of player
+                    //tile is right of Koala
                     player.desiredPosition = CGPointMake(player.desiredPosition.x - intersection.size.width, player.desiredPosition.y);
-                    player.velocity = CGPointMake(0, player.velocity.y);
+                    NSLog(@"HERE right");
+                    player.velocity = CGPointMake(0, player.velocity.y); ////Here
                     //3
                 } else {
-                    //TODO will changing the players veocity here be helpful or harmful?
-                    //Intersection rectangle is in this shape:
                     if (intersection.size.width > intersection.size.height) {
-                        //tile is on the diagonal, but resolving collision vertically
-
+                        //tile is diagonal, but resolving collision vertically
+                        //4
+                        player.velocity = CGPointMake(player.velocity.x, 0.0); ////Here
                         float intersectionHeight;
-                        if (tileIndex > RIGHT_B) {//AKA Is this tile on the bottom row?
+                        if (tileIndex > RIGHT_B - 1 || tileIndex == RIGHT_A) { //Tile is under/right player
                             intersectionHeight = intersection.size.height;
+                            player.onGround = YES; ////Here
                         } else {
                             intersectionHeight = -intersection.size.height;
                         }
                         player.desiredPosition = CGPointMake(player.desiredPosition.x, player.desiredPosition.y + intersectionHeight);
+                        NSLog(@"Here diagonal, down");
                     } else {
                         //tile is diagonal, but resolving horizontally
                         float intersectionWidth;
-                        if (tileIndex == UP_LEFT || tileIndex == DOWN_LEFT) { //And this
+                        if (tileIndex == UP_LEFT || tileIndex == DOWN_LEFT) {
                             intersectionWidth = intersection.size.width;
                         } else {
                             intersectionWidth = -intersection.size.width;
                         }
+                        NSLog(@"Here diagonal left, Up and down");
+                        //5
                         player.desiredPosition = CGPointMake(player.desiredPosition.x + intersectionWidth, player.desiredPosition.y);
                     }
                 }
             }
         }
-        NSLog(@"*****");
     }
+    //6
     player.position = player.desiredPosition;
-    //END COLLISION RESOLUTION
-    NSLog(@"ending...");
-    return;
+}           */
 }
 
 @end
