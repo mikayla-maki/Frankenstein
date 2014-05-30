@@ -61,24 +61,28 @@
     //	int idx = coord.x + coord.y * _layerGridSize.width;
 
 //    NSAssert(idx < (_layerGridSize.width * _layerGridSize.height), @"index out of bounds!");
+    /*
+  NSLog(@"Coord.x: %f", coord.x);
+  NSLog(@"Coord.y: %f", coord.y);
 
-    NSLog(@"Coord.x: %f", coord.x);
-    NSLog(@"Coord.y: %f", coord.y);
-    NSLog(@"Layer height: %f",[[layer layerInfo] layerGridSize].height);
-    NSLog(@"Layer width: %f", [[layer layerInfo] layerGridSize].width);
-    NSLog(@"gidSize: %f < %f x %f (%f) = %@", coord.x + coord.y * layerInfo.layerGridSize.width,
-            layerInfo.layerGridSize.width,
-            layerInfo.layerGridSize.height, layerInfo.layerGridSize.width * layerInfo.layerGridSize.height,
-            coord.x + coord.y * layerInfo.layerGridSize.width < layerInfo.layerGridSize.width * layerInfo.layerGridSize.height ? @"YES" : @"NO");
+  NSLog(@"Layer height: %f",[[layer layerInfo] layerGridSize].height);
+  NSLog(@"Layer width: %f", [[layer layerInfo] layerGridSize].width);
+
+  NSLog(@"gidSize: %f < %f x %f (%f) = %@", coord.x + coord.y * layerInfo.layerGridSize.width,
+          layerInfo.layerGridSize.width,
+          layerInfo.layerGridSize.height, layerInfo.layerGridSize.width * layerInfo.layerGridSize.height,
+          coord.x + coord.y * layerInfo.layerGridSize.width < layerInfo.layerGridSize.width * layerInfo.layerGridSize.height ? @"YES" : @"NO");
+          */
     return [layerInfo tileGidAtCoord:coord];
 }
 
 
 /*
- This method is terrible. Fix it later
+ This method is terrible. It manually manages collisions. I need to modify it to send out events involving the two
+ types of collidees. Then I can ask them how to proceed
  */
 - (void)resolveCollisionsWithLayer:(TMXLayer *)layer withPlayer:(Player *)player {
-    NSInteger gid = [self tileGIDAtTileCoord:CGPointMake(99, 19) forLayer:layer];
+    //NSInteger gid = [self tileGIDAtTileCoord:CGPointMake(99, 19) forLayer:layer];
     int DOWN_A = 13;
     int DOWN_B = 14;
     int UP_A = 1;
@@ -100,18 +104,24 @@
     12 13 14  15
     The tiles with p are assumed to be the players coordinates
      */
+    //THIS IS NOT WORKING AT ALL. Players top can go right through everything
     int indices[12] = {DOWN_A, DOWN_B, UP_A, UP_B, LEFT_A, LEFT_B, RIGHT_A, RIGHT_B, UP_LEFT, UP_RIGHT, DOWN_LEFT, DOWN_RIGHT}; //Order of collision resolution
+    NSLog(@"starting...");
 
     for (int i = 0; i < indiceLength; i++) {
         int tileIndex = indices[i];
-
-        CGRect playerRect = [player collisionBoundingBox];
-        CGPoint playerCoord = [layer coordForPoint:player.desiredPosition];
+        NSLog(@"Current index: %d", tileIndex);
         NSInteger tileColumn = tileIndex % 4;
         NSInteger tileRow = tileIndex / 4;
+        CGPoint playerCoord = [layer coordForPoint:player.desiredPosition]; //We do this here because previous operations
+        // could have changed desired position
+        NSLog(@"Player coord: (%f,%f)", playerCoord.x, playerCoord.y);
+        NSLog(@"Player velocity: (%f,%f)", player.velocity.x, player.velocity.y);
+
+        CGRect playerRect = [player collisionBoundingBox]; // Same goes for this
+
+        NSLog(@"examinedTile (x,y): (%f,%f)", playerCoord.x + (tileColumn - 1), playerCoord.y + (tileRow - 1));
         CGPoint tileCoord = CGPointMake(playerCoord.x + (tileColumn - 1), playerCoord.y + (tileRow - 1));
-        //NSLog(<#(NSString*)format, ...#>)
-        NSLog(@"tileCoord.x: %f tileCoord.y: %f", tileCoord.x, tileCoord.y);
         NSInteger gid = [self tileGIDAtTileCoord:tileCoord forLayer:layer];
 
         if (gid) {
@@ -152,7 +162,7 @@
                         } else {
                             intersectionHeight = -intersection.size.height;
                         }
-                        player.desiredPosition = CGPointMake(player.desiredPosition.x, player.desiredPosition.y + intersection.size.height);
+                        player.desiredPosition = CGPointMake(player.desiredPosition.x, player.desiredPosition.y + intersectionHeight);
                     } else {
                         //tile is diagonal, but resolving horizontally
                         float intersectionWidth;
@@ -166,9 +176,11 @@
                 }
             }
         }
+        NSLog(@"*****");
     }
     player.position = player.desiredPosition;
     //END COLLISION RESOLUTION
+    NSLog(@"ending...");
     return;
 }
 

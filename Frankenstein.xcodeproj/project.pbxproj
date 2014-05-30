@@ -11,6 +11,7 @@
 		325900D076A2DDE3BC2815B5 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 325905A593EE6D1473F63CEF /* player.png */; };
 		325904FA2114F2F3AADE96C1 /* character_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 32590AC621083BAF0F5A49C1 /* character_normal.png */; };
 		32590A0987EFE9FFD778E289 /* character_crawl.png in Resources */ = {isa = PBXBuildFile; fileRef = 32590016F3FCAAFEB0E701D0 /* character_crawl.png */; };
+		32590AD5A5AE59F687F65540 /* tmp.txt in Resources */ = {isa = PBXBuildFile; fileRef = 32590FD41E1FB33BB9596415 /* tmp.txt */; };
 		D000B7CB192E4832001219B9 /* 1.2.3.png in Resources */ = {isa = PBXBuildFile; fileRef = D000B7C9192E4832001219B9 /* 1.2.3.png */; };
 		D000B7CC192E4832001219B9 /* 1.2.3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = D000B7CA192E4832001219B9 /* 1.2.3.tmx */; };
 		D000B7CE192E4839001219B9 /* Bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D000B7CD192E4839001219B9 /* Bg.png */; };
@@ -66,6 +67,7 @@
 		325905A593EE6D1473F63CEF /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Art/player.png; sourceTree = SOURCE_ROOT; };
 		32590AC621083BAF0F5A49C1 /* character_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = character_normal.png; path = Art/Characters/character_normal.png; sourceTree = SOURCE_ROOT; };
 		32590F252C6A55FCDB649D07 /* character_crawl_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = character_crawl_2.png; path = Art/Characters/character_crawl_2.png; sourceTree = SOURCE_ROOT; };
+		32590FD41E1FB33BB9596415 /* tmp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tmp.txt; sourceTree = "<group>"; };
 		D000B7C9192E4832001219B9 /* 1.2.3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.2.3.png; path = Art/1.2.3.png; sourceTree = SOURCE_ROOT; };
 		D000B7CA192E4832001219B9 /* 1.2.3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = 1.2.3.tmx; path = Art/1.2.3.tmx; sourceTree = SOURCE_ROOT; };
 		D000B7CD192E4839001219B9 /* Bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bg.png; path = Art/Bg.png; sourceTree = SOURCE_ROOT; };
@@ -203,6 +205,7 @@
 				D07E6042192C0645004D1197 /* Assets */,
 				D06DF1911925C74900379369 /* Images.xcassets */,
 				D06DF1781925C74900379369 /* Supporting Files */,
+				32590FD41E1FB33BB9596415 /* tmp.txt */,
 			);
 			path = Frankenstein;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				32590021662C4976EC436BAE /* character_crawl_2.png in Resources */,
 				32590A0987EFE9FFD778E289 /* character_crawl.png in Resources */,
 				325904FA2114F2F3AADE96C1 /* character_normal.png in Resources */,
+				32590AD5A5AE59F687F65540 /* tmp.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

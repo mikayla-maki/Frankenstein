@@ -1,0 +1,60 @@
+Problem comes from sprite in a position where there is a block two above it and the player pushes into it for a short time.
+More data, when
+
+
+starting...
+2014-05-30 11:17:52.675 Frankenstein[90183:70b] Current index: 13
+2014-05-30 11:17:52.676 Frankenstein[90183:70b] Player coord: (21.000000,17.000000)
+2014-05-30 11:17:52.676 Frankenstein[90183:70b] Player velocity: (32.012074,-8.099999)
+2014-05-30 11:17:52.677 Frankenstein[90183:70b] examinedTile (x,y): (21.000000,19.000000)
+2014-05-30 11:17:52.677 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.678 Frankenstein[90183:70b] Current index: 14
+2014-05-30 11:17:52.678 Frankenstein[90183:70b] Player coord: (21.000000,17.000000)
+2014-05-30 11:17:52.678 Frankenstein[90183:70b] Player velocity: (32.012074,0.000000)
+2014-05-30 11:17:52.679 Frankenstein[90183:70b] examinedTile (x,y): (22.000000,19.000000)
+2014-05-30 11:17:52.679 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.680 Frankenstein[90183:70b] Current index: 1
+2014-05-30 11:17:52.680 Frankenstein[90183:70b] Player coord: (21.000000,17.000000)
+2014-05-30 11:17:52.681 Frankenstein[90183:70b] Player velocity: (32.012074,0.000000)
+2014-05-30 11:17:52.681 Frankenstein[90183:70b] examinedTile (x,y): (21.000000,16.000000)
+2014-05-30 11:17:52.682 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.682 Frankenstein[90183:70b] Current index: 2
+2014-05-30 11:17:52.682 Frankenstein[90183:70b] Player coord: (21.000000,17.000000)
+2014-05-30 11:17:52.683 Frankenstein[90183:70b] Player velocity: (32.012074,0.000000)
+2014-05-30 11:17:52.683 Frankenstein[90183:70b] examinedTile (x,y): (22.000000,16.000000)
+2014-05-30 11:17:52.684 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.684 Frankenstein[90183:70b] Current index: 4
+2014-05-30 11:17:52.684 Frankenstein[90183:70b] Player coord: (21.000000,18.000000)
+2014-05-30 11:17:52.685 Frankenstein[90183:70b] Player velocity: (32.012074,0.000000)
+2014-05-30 11:17:52.685 Frankenstein[90183:70b] examinedTile (x,y): (20.000000,18.000000)
+2014-05-30 11:17:52.686 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.686 Frankenstein[90183:70b] Current index: 8
+2014-05-30 11:17:52.687 Frankenstein[90183:70b] Player coord: (21.000000,18.000000)
+2014-05-30 11:17:52.687 Frankenstein[90183:70b] Player velocity: (32.012074,0.000000)
+2014-05-30 11:17:52.688 Frankenstein[90183:70b] examinedTile (x,y): (20.000000,19.000000)
+2014-05-30 11:17:52.688 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.688 Frankenstein[90183:70b] Current index: 7
+2014-05-30 11:17:52.689 Frankenstein[90183:70b] Player coord: (22.000000,18.000000)
+2014-05-30 11:17:52.689 Frankenstein[90183:70b] Player velocity: (0.000000,0.000000)
+2014-05-30 11:17:52.690 Frankenstein[90183:70b] examinedTile (x,y): (24.000000,18.000000)
+2014-05-30 11:17:52.690 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.691 Frankenstein[90183:70b] Current index: 11
+2014-05-30 11:17:52.691 Frankenstein[90183:70b] Player coord: (22.000000,18.000000)
+2014-05-30 11:17:52.691 Frankenstein[90183:70b] Player velocity: (0.000000,0.000000)
+2014-05-30 11:17:52.692 Frankenstein[90183:70b] examinedTile (x,y): (24.000000,19.000000)
+2014-05-30 11:17:52.692 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.693 Frankenstein[90183:70b] Current index: 0
+2014-05-30 11:17:52.693 Frankenstein[90183:70b] Player coord: (22.000000,18.000000)
+2014-05-30 11:17:52.694 Frankenstein[90183:70b] Player velocity: (0.000000,0.000000)
+2014-05-30 11:17:52.695 Frankenstein[90183:70b] examinedTile (x,y): (21.000000,17.000000)
+2014-05-30 11:17:52.696 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.696 Frankenstein[90183:70b] Current index: 3
+2014-05-30 11:17:52.697 Frankenstein[90183:70b] Player coord: (22.000000,18.000000)
+2014-05-30 11:17:52.697 Frankenstein[90183:70b] Player velocity: (0.000000,0.000000)
+2014-05-30 11:17:52.698 Frankenstein[90183:70b] examinedTile (x,y): (24.000000,17.000000)
+2014-05-30 11:17:52.698 Frankenstein[90183:70b] *****
+2014-05-30 11:17:52.699 Frankenstein[90183:70b] Current index: 12
+2014-05-30 11:17:52.699 Frankenstein[90183:70b] Player coord: (22.000000,18.000000)
+2014-05-30 11:17:52.700 Frankenstein[90183:70b] Player velocity: (0.000000,0.000000)
+2014-05-30 11:17:52.701 Frankenstein[90183:70b] examinedTile (x,y): (21.000000,20.000000)
+INDEXOUTOF BOUNDS
