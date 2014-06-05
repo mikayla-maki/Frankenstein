@@ -1,38 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="125" height="25" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="1.2.3" tilewidth="32" tileheight="32">
-  <image source="../../Art/1.2.3.png" trans="ff00ff" width="128" height="128"/>
- </tileset>
- <tileset firstgid="17" name="Untitled_artwork" tilewidth="32" tileheight="32">
-  <image source="../../Art/Tile sheet peices/Untitled_artwork.png" width="312" height="536"/>
- </tileset>
- <tileset firstgid="161" name="Untitled_artwork-2" tilewidth="32" tileheight="32">
-  <image source="../../Art/Tile sheet peices/Untitled_artwork-2.png" width="256" height="256"/>
- </tileset>
- <tileset firstgid="225" name="Untitled_artwork-1" tilewidth="32" tileheight="32">
-  <image source="../../Art/Tile sheet peices/Untitled_artwork-1.png" width="64" height="128"/>
- </tileset>
- <tileset firstgid="233" name="coat rck" tilewidth="32" tileheight="32">
-  <image source="../../Art/Tile sheet peices/coat rck.png" width="128" height="736"/>
+  <image source="../../Art/tile sheets/room1_home1/1.2.3.png" width="992" height="800"/>
  </tileset>
  <layer name="door_floor" width="125" height="25">
   <data encoding="base64" compression="zlib">
-   eJztmNsKwjAQROPdKvr/ryp4Ba+ggqB+mvOyNE+SpmRdmzkwIIF2Jz0EWgvn3MjZonDxnWbIHFl4a0tkhayVu1ia4c/RmleFCTKNvHaDbJGdt7ZHDsgx4n4az6fOfmPmaM2rQp1OJ+SMXLy1K3JD7spdLM3w51hy3kLaruzUQbqR93p4v5/IC3lHdJFzXqfLL2f4WHTeQ/qu7DRAhg3uIjPEeer9WnQuWOqk0UXrnYrOw6BzHSx9S9C5DnSeBjoPg851yM15zt/nQm7Oec7pPBV0Hgad60DnaZC9WHq+gqVOTXTOc/4dOteBztNA52HQuQ50ngY6D4POdbDUif+9kn+GzvNDXI+Z7PIBNpgfqw==
+   eJztmbENwkAQwH6zwCKw/xakOYkKiQLLfGzp6nPezSc51lq35eJYHifChXre2WM638Hk9DjnucGO9z3Uvm8wOdWcweRUcwaTU80ZTE41ZzA51ZzB5ES8Q9Tc5VRzBpPTjs1N3z+Gmv92j+l8B5NTzRlMTjVnMDnVnMHktGPz7nCf2bG56XwHk1PNGUxONWcwOdWcweRUcwaTU80ZTE79S41/pubXY1rfm8vNC69qblY=
   </data>
  </layer>
  <layer name="bg" width="125" height="25">
   <data encoding="base64" compression="zlib">
-   eJzt00VuXEEYRWE7zImZmZmxzXaYmZmZmWOHmRmWkC2EmZkzi8LMeLyAKqnjtqueVVf6Bj341SUdPSen2rFjOI4TOIlTOI0zOKvwXbrvOV7gJV4pfou9O4fzuICLuITLuIKrCt+l+17jDd7ineK32LtruI4buIlbuI07uKvwXbrvPT7gIz4pfou9u4f7eICHeITHeIKn6p6l/T7jC77im+K3mNXMvuMHfuKX4reY1cx+4w/+Vv5wVvsWR+2o6gdoPmc610Fd1Kslzc3kq0/nBmiIRqa5peYCV7jBHR7whBe84SO4a0znJmiKZqa5peYLP/gjAIEIQjBCECq4a07nFmiJVqa5pRaGcEQgElGIRgxiESe4c6GzK9zgbppbavFIQCKSkIwUpCIN6YI7Dzp7wgveprmlloFMZCEbOciFDXnIF9z50NkXfvA3zYWzOYCjV4BCFKEYJShFGVqjjeAugM6BCEKwaS7d/3arjt6Va4t2aI8O6IhO6Iwu6Cq4C6FzKMIQbppLp1vzbuiOHuiJXuiNPuiLfoK7CDpHIgrRprl0ujXvjwEYiEEYjCEYimEYLriLoXMs4hBvmkunW/MRGIlRGI0xGItxGI8JgrsEOiciCcmmuXS6NZ+ISZiMKZiKaZiOGZgpuEuhcyrSkG6aS6db81mYjTmYi3mYjwVYiEWCuww6ZyIL2aa5dLo1X4wlWIplWI4VKEcFVgrucuicCxvyTHPpdGu+CquxBmuxDuuxARuxSXCXT+cCFKKois2fVe1c++nWfDO2YCu2YTt2YCd2YbfgrpjOJShFmfnOpdOt+R7sxT7sxwEcxCEcxpFq+l8za+wfHeh1Ug==
+   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
   </data>
  </layer>
  <layer name="upgrade" width="125" height="25">
   <data encoding="base64" compression="zlib">
-   eJztzskJADEMALH032XO3TLiKmwCEsx/WntTj0b1BKlmtKonSLWjUz1Bqi/6qycAAAAAAAAAAAAASHMBqsoHJQ==
+   eJztzkENACEMAEGMgxJQAkruzFAVbUhmkv1va2/q0aieINWMVvUEqXZ0qidI9UV/9QQAAAAAAAAAAAAAaS6t5AVh
   </data>
  </layer>
  <layer name="stairs" width="125" height="25">
   <data encoding="base64" compression="zlib">
-   eJzt1CESACEMBMFYjv//F4M9C1S2u2p9zKTqXXPvu30IcMQo3UOiv/b9BMilf8ilf+hDz9CHnqEPPUMvmoZc+odc+odc+gcSLOidAg0=
+   eJzt1LkNwlAQBNDFFiQcvdDB5hBAFXTBUQgxkEHOFYChB64MeuASEyNsEyBs/50nTWI7+NJ4vghlWTXpA9DfNZBm0of4IX0LEdmhwv0TEVmg8vm+D3tORO5T4f4pm1q5pE+QPircM9k1xp0wceheULG55xU6XCOBQ10SqdjccxjPE/G96G+KeF9Cykgl5luiNFPh/uPUsPE6d04OUnF7/23stoN0kR43bEL/y54H+G6IjPhfZN4UHc6QObJAliGdBni+QbaGO1dx487focM9ckCOyCmi0zPeXQx37oorOrwhd+SBPCM6zfsiBf9/Z6P0eAFCbSa/
   </data>
  </layer>
 </map>
