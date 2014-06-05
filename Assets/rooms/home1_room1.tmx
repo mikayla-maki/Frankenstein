@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="125" height="25" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="1.2.3" tilewidth="32" tileheight="32">
-  <image source="../Art/1.2.3.png" trans="ff00ff" width="128" height="128"/>
+  <image source="../../Art/1.2.3.png" trans="ff00ff" width="128" height="128"/>
  </tileset>
  <tileset firstgid="17" name="Untitled_artwork" tilewidth="32" tileheight="32">
-  <image source="../Art/Tile sheet peices/Untitled_artwork.png" width="312" height="536"/>
+  <image source="../../Art/Tile sheet peices/Untitled_artwork.png" width="312" height="536"/>
  </tileset>
  <tileset firstgid="161" name="Untitled_artwork-2" tilewidth="32" tileheight="32">
-  <image source="../Art/Tile sheet peices/Untitled_artwork-2.png" width="256" height="256"/>
+  <image source="../../Art/Tile sheet peices/Untitled_artwork-2.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="225" name="Untitled_artwork-1" tilewidth="32" tileheight="32">
-  <image source="../Art/Tile sheet peices/Untitled_artwork-1.png" width="64" height="128"/>
+  <image source="../../Art/Tile sheet peices/Untitled_artwork-1.png" width="64" height="128"/>
  </tileset>
  <tileset firstgid="233" name="coat rck" tilewidth="32" tileheight="32">
-  <image source="../Art/Tile sheet peices/coat rck.png" width="128" height="736"/>
+  <image source="../../Art/Tile sheet peices/coat rck.png" width="128" height="736"/>
  </tileset>
  <layer name="door_floor" width="125" height="25">
   <data encoding="base64" compression="zlib">
